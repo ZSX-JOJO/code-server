@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "es6",
+    "lib": ["es2020", "dom", "dom.iterable"],
     "module": "commonjs",
     "moduleResolution": "node",
     "strict": true,
@@ -19,9 +20,10 @@
       "./node_modules/@types",
       "./typings",
       "./test/node_modules/@types",
-      "./vendor/modules/code-oss-dev/src/vs/server/@types"
+      "./lib/vscode/src/vs/server/@types"
     ],
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "resolveJsonModule": true
   },
   "include": ["./src/**/*"],
   "exclude": ["/test", "/lib", "/ci", "/doc"]
